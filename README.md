@@ -9,7 +9,7 @@ main()
 
         lower = 0;       /* 温度表的下限 */
         upper = 300;     /* 温度表的上限 */
-        step = 0;         /*     不长     */
+        step = 20;         /*     不长     */
 
         fahr = lower;
         while(fahr <= upper)
