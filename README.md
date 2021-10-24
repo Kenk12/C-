@@ -72,3 +72,26 @@ main ()
         printf("%3d %6.1f\n",fahr,(5.0/9.0)*(fahr-32));
 }
 
+文件复制
+#include<stdio.h>
+main()
+{
+    int c;
+    c=getchar();
+    while(c!=EOF){
+        putchar(c);
+        c=getchar();
+    }
+}
+#include<stdio.h>
+main()
+{
+    int c;
+    c=getchar();
+    while(c!=EOF){
+        putchar(c);
+        c=getchar();
+    }
+}
+
+
