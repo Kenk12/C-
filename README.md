@@ -46,6 +46,9 @@ main()
 
 }
 
+
+
+
 逆向输出温度表
 #include <stdio.h>
 main()
@@ -56,6 +59,13 @@ main()
             printf("%3d %6.1f\n",fahr,(5.0/9.0)*(fahr-32));
         }
 }
+
+
+
+
+
+
+
 
 #define 名字，替换文本
 
@@ -71,6 +81,12 @@ main ()
     for(fahr=LOWER;fahr<=UPPER;fahr=fahr+STEP)
         printf("%3d %6.1f\n",fahr,(5.0/9.0)*(fahr-32));
 }
+
+
+
+
+
+
 
 文件复制
 #include<stdio.h>
@@ -95,6 +111,13 @@ main()
 }
 
 
+
+
+
+
+
+
+
 #include <stdio.h>
 /* count blanks, tabs, and newlines */
 main()
@@ -114,6 +137,18 @@ main()
     printf("%3d %3d %3d\n",blanks,tabs,newlines);
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 #include<stdio.h>
 /* 统计各个数字、空白符及其他字符出现的次数 */
 main()
