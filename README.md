@@ -65,7 +65,7 @@ main()
 
 
 
-
+define应用
 
 #define 名字，替换文本
 
@@ -115,7 +115,7 @@ main()
 
 
 
-
+统计空格，制表符，和换行符的个数
 
 
 #include <stdio.h>
@@ -148,7 +148,7 @@ main()
 
 
 
-
+统计各个数字、空白符及其他字符出现的次数
 #include<stdio.h>
 /* 统计各个数字、空白符及其他字符出现的次数 */
 main()
@@ -171,6 +171,9 @@ main()
         printf(", white space =%d,other=%d\n",nwhite,nother);}
 }
 
+
+
+测试power函数
 #include <stdio.h>
 
 /* 测试power函数 */
