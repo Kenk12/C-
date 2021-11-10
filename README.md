@@ -397,4 +397,24 @@ int main()
         }while(a != number);
         printf("太好了,你用了%d次就猜到了答案。\n",count);
 }
+#include<stdio.h>
+int main()
+{
+    int x;
+    scanf("%d",x);
+    //x = 12345;
+    int digit;
+    int ret = 0;
+
+    while (x>0){
+        digit = x%10;
+        ret = ret*10 + digit;
+        printf("x=%d,digit=%d,ret=%d\n",x,digit,ret);
+        x /= 10;
+
+    }
+    printf("%d",ret);
+    printf("helloworld");
+    return 1;
+}
 
