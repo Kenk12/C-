@@ -640,3 +640,30 @@ int main()
           } while ( mask > 0);
           printf("\n");
 }
+
+/* 求最大公约数 */
+#include<stdio.h>                                       /* 枚举 */
+int main()                                              
+{
+    int a,b;                                            /* 1.设t为2 */
+    int min;                                            /* 如果u和v都被t整除，则记下这个t */
+    scanf("%d %d",&a, &b);                              /* t加1后重复第2步，直到t等于u或v */
+    if ( a < b ){                                       /* 那么，曾经记下的最大的可以同时整除u和v的t就是gcd */
+        min = a;
+    }
+    else
+        {
+            min = b;
+        }
+    int ret = 0;
+    int i;
+    for ( i = 1; i <= min; i++ ){
+        if ( a%i == 0 ){
+            if( b%i == 0 ){
+                ret = i;
+            }
+        }
+    }
+    printf("%d和%d的最大公约数是%d.\n", a , b , ret);
+}
+
