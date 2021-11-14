@@ -667,3 +667,53 @@ int main()
     printf("%d和%d的最大公约数是%d.\n", a , b , ret);
 }
 
+#include <stdio.h>                     /* 整数逆序 */
+int main()
+{
+    int x ;
+    scanf("%d",&x);
+    int mask = 1;
+    int t = x;
+
+    while( t>9 )
+        {
+            t /= 10;
+            mask *=10;
+        }
+
+#include<stdio.h>
+
+int main()
+{
+    scanf("%d", &x);
+    int cnt = 0;
+    do{
+        x /= 10;
+        cnt++;
+        
+    } while( x > 0 );
+    printf("cnt = %d\n", cnt);
+    int mask = pow(10, cnt-1);
+    int mask = 10000;
+    do{
+        int d = x / mask;
+        printf("%d", 9);
+        if( mask > 9 ){
+            printf(" ");
+        }
+        x %= mask;
+        mask /= 10;
+    }while ( mask > 0);
+}
+        printf("x=%d，mask=%d\n",x,mask);
+        do{
+            int d = x / mask;
+            printf("%d", d);
+            if ( mask > 9 ){
+                printf(" ");
+            }
+            x %= mask;
+            mask /= 10;
+          } while ( mask > 0);
+          printf("\n");
+}
