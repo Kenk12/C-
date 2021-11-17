@@ -717,3 +717,126 @@ int main()
           } while ( mask > 0);
           printf("\n");
 }
+
+
+//统计0-9数字出现的次数
+#include<stdio.h>
+
+int main()
+{
+    int x;
+    int count[10];
+    int i;
+
+    for( i=0; i<10 ;i++ )
+        {
+            count[i]=0;
+        }
+        scanf("%d",&x);
+        while( x!= -1 )
+            {
+                if( x>=0 && x<=9 ){
+                    count[x]++;
+                }
+                scanf("%d", &x);
+            }
+            for( i=0; i<10; i++){
+                printf("%d:%d\n",i,count[i]);
+            }
+            return 0;
+}
+
+
+#include <stdio.h>                     /* 整数逆序 */
+int main()
+{
+    int x ;
+    scanf("%d",&x);
+    int mask = 1;
+#include <stdio.h>
+int main()
+{
+    int x;
+    double sum = 0;
+    int cnt = 0;
+    int number[100];
+    scanf("%d",&x);
+    while( x!= -1){
+        number[cnt] = x;
+        sum += x;
+        cnt ++;
+        scanf("%d",&x);
+    }
+    if( cnt>0 ){
+        printf("%f\n, sum/cnt");
+        int i;
+        for ( i=0; i<cnt; i++){
+            if( number[i] > sum/cnt ){
+                printf("%d\n,number[i]");
+            }
+        }
+    }
+    return 0;
+}
+
+}
+#include <stdio.h>                     /* 整数逆序 */
+int main()
+{
+    int x ;
+    scanf("%d",&x);
+    int mask = 1;
+#include <stdio.h>
+int main()
+{
+    int x;
+    double sum = 0;
+    int cnt = 0;
+    int number[100];
+    scanf("%d",&x);
+    while( x!= -1){
+        number[cnt] = x;
+        sum += x;
+        cnt ++;
+        scanf("%d",&x);
+    }
+    if( cnt>0 ){
+        printf("%f\n, sum/cnt");
+        int i;
+        for ( i=0; i<cnt; i++){
+            if( number[i] > sum/cnt ){
+                printf("%d\n,number[i]");
+            }
+        }
+    }
+    return 0;
+}
+
+}
+
+统计 0-9数字出现的次数
+#include<stdio.h>
+
+int main()
+{
+    int x;
+    int count[10];
+    int i;
+
+    for( i=0; i<10 ;i++ )
+        {
+            count[i]=0;
+        }
+        scanf("%d",&x);
+        while( x!= -1 )
+            {
+                if( x>=0 && x<=9 ){
+                    count[x]++;
+                }
+                scanf("%d", &x);         //while 嵌套循环scanf语句不断输出数字，如果没有只能输入一个数字就结束
+            }
+            for( i=0; i<10; i++){
+                printf("%d:%d\n",i,count[i]);
+            }
+            return 0;
+}
