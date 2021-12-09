@@ -856,3 +856,155 @@ int main()
         return 0;
 }
 
+
+10.2-2字符串函数strlen（SHD）
+#include <stdio.h>
+#include <string.h>
+
+size_t mylen( const char* s )
+{
+    int idx = 0;
+    while (s[idx] !='\0'){
+        idx++;
+    }
+    return idx;
+}
+
+int main(int argc,char const *argv[])
+{
+    char line[] = "Hello";
+    printf("strlen=%lu\n",mylen(line));
+    printf("sizeof=%lu\n",sizeof(line));
+
+    return 0;
+}
+
+#include<stdio.h>
+#include<string.h>
+
+int main(int argc, char const *argv[])
+{
+    char s1[] = "abc";
+    char s2[] = "abc ";
+    printf("%d\n", strcmp(s1,s2));
+    printf("%d\n", 'a' - 'A');
+
+    return 0;
+}
+
+
+#include<stdio.h>
+#include<string.h>
+
+int mycmp(const char* s1,const char* s2)
+{
+    int idx = 0;
+    while ( s1[idx] == s2[idx] && s1[idx]!= '\0' ){
+        idx++;
+    }
+}
+
+int main(int argc, char const *argv[])
+{
+    char s1[] = "abc";
+    char s2[] = "abc";
+    printf("%d\n", mycmp(s1,s2));
+    printf("%d\n", 'a' - 'A');
+
+    return 0;
+}
+
+
+#include<stdio.h>
+#include<string.h>
+
+int mycmp(const char* s1,const char* s2)
+{
+    while( *s1 == *s2 && *s1 !='\0')
+        {
+            s1++;
+            s2++;
+        }
+        return *s1 - *s2;
+}
+
+int main(int argc, char const *argv[])
+{
+    char s1[] = "abc";
+    char s2[] = "abc";
+    printf("%d\n", mycmp(s1,s2));
+    printf("%d\n", 'a' - 'A');
+
+    return 0;
+}
+
+#include<stdio.h>
+#include<string.h>
+//const在*后面，才修饰指针，指针指向不可改变； const在*前面，修饰指向的对象，指向对象内容不能改变
+char* mycpy(char* dst, const char* src)
+{
+  int idx =0;
+  while (src[idx] ){
+    dst[idx] = src[idx];
+    idx++;
+  }
+  dst[idx] = '\0';
+  return ret;
+}
+
+
+
+int main(int argc, char const *argv[])
+{
+    char s1[] = "abc";
+    char s2[] = "abc";
+    strcpy(s1, s2);
+
+    return 0;
+}
+
+
+
+
+#include <stdio.h>
+
+enum color { red, yellow, green };
+
+void f( enum color c );
+
+int main(void)
+{
+    enum color t = red;
+    scanf("%d", &t);
+    f(t);
+
+    return 0;
+}
+
+void f(enum color c)
+{
+    printf("%d\n", c);
+}
+
+
+#include <stdio.h>
+
+struct date
+{
+    int month;
+    int day;
+    int year;
+};
+
+int main(int argc, char const *argv[])
+{
+    struct date today;
+
+    today.month = 07;
+    today.day = 31;
+    today.year = 2021;
+
+    printf("Today`s date is %i-%i-%i.\n",today.year,today.day,today.year);
+
+    return 0;
+}
