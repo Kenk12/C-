@@ -1008,3 +1008,23 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
+#include <stdio.h>
+
+int main(  )
+{
+   int a,b,min,*p_a,*p_b,*p_min;
+   p_a = &a;
+   p_b = &b;
+   p_min = &min;
+
+
+   scanf("%d %d" ,p_a,p_b) ;
+      *p_min = *p_a;
+   if( *p_b < *p_min )
+        *p_min = *p_b;
+   printf("%d\n",*p_min);
+     printf("%dL\n",min);
+     printf("%d\n",p_min);
+   return 0;
+}
+
