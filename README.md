@@ -1028,3 +1028,131 @@ int main(  )
    return 0;
 }
 
+#include<stdio.h>
+
+int main()
+{
+    int i = 0;
+    char string1[] = "China", string2[10];
+    while(string1[i] != '\0');          //初始化后不能为string1[]； *(string1+i);
+    {
+        string2[i]=string1[i];           //*(string2 + i) = *(string1 + i);
+        i++;
+    }
+    string2[i]= '\0';                    //*(string2+i);
+    printf("%s\n",string1);               
+    printf("%s\n",string2);
+    return 0;
+}
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char *name[5]={"Japan","English","France","China","American"};
+
+    int i,j,min;
+    char *temp;
+    int count =5;
+    for(i=0;i<count -1;i++)
+        {
+            min =i;
+    for(j=i +1;j<count;j++)
+        if(strcmp(name[min],name[j])>0)
+        min = j;
+    if(min!= i)
+    {
+        temp = name[i];
+        name[i] = name[min];
+        name[min] = temp;
+    }
+        }
+        for(i=0;i<5;i++)
+            printf("%s\n",name[i]);
+        return 0;
+ }
+
+
+#include<stdio.h>
+
+int main()
+{
+    char ch,*p_ch;
+    p_ch = &ch;
+    *p_ch = 'a';
+    printf("%d\n",p_ch);
+    printf("%c",*p_ch);
+    return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+    char *name[5]={"American","China","Japan","English","France"};
+    int i;
+    char **p;
+
+    p=name;
+    for(i=0;i<5;i++)
+    {
+        printf("%s\n",*(p+i));
+    }
+}
+
+#include<stdio.h>
+
+void transpose(int maxtrix[5][5])
+{
+    int temp,i,j;
+    for(i=0;i<5;i++)
+    for(j=0;j<=i;j++)
+    {
+        temp = maxtrix[i][j];
+        maxtrix[i][j] = maxtrix[j][i];
+        maxtrix[j][i] = temp;
+    }
+}
+
+    int main()
+    {
+        int sss[5][5] ={{0,1,2,3,4},{0,1,2,3,4},{0,1,2,3,4},{0,1,2,3,4},{0,1,2,3,4}};
+        int i,j;
+
+        transpose (sss);
+         for(i=0;i<5;i++)
+        {for(j=0;j<5;j++)
+            {
+                printf("%d",sss[i][j]);
+                printf("\n");
+            }
+        }
+        return 0;
+    }
+
+#include<stdio.h>
+#include<string.h>
+
+void reverse(char *str)
+{
+    char c;
+    int i,j,n;
+    i = 0;
+    n = strlen( str );
+    j = n;
+    while ( i < n/2 )
+    {
+        c = str[i];
+        str[i] = str[j-1];
+        str[j-1] = c;
+        i++;
+        j--;
+    }
+}
+    int main()
+    {
+        char c[] = "WRNMLGB";
+        reverse(c);
+        printf("穿梭时间画面的钟=%s",c);
+        return 0;
+    }
